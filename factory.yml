@@ -1,0 +1,20 @@
+- job-template:
+    name: 'fedora-{plugin}'
+    scm:
+      - git:
+        url: https://github.com/Spredzy/vimfactory.org
+    builders:
+      - shell: |
+          rpmdev-setuptree
+          wget '{url}/archive/{version}.tar.gz'
+          tar -xzvf '{version}.tar.gz' -C ~/rpmbuild/SOURCES
+          cp ~/vimfactory.org/specs/{plugin}/{plugin}.spec ~/rpmbuild/SPECS
+          rpmbuild -ba ~/rpmbuild/SPECS/{plugin}.spec
+
+- project:
+    name: Vim-Factory
+    jobs:
+      - 'fedora-{plugin}':
+         plugin: vim-licenses
+         url: https://github.com/antoyo/vim-licenses
+         version: v0.5
