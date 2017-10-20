@@ -11,7 +11,7 @@
     builders:
       - shell: |
           rpmdev-setuptree
-          wget -O $HOME/rpmbuild/SOURCES/v{version}.tar.gz {url}/archive/v{version}.tar.gz
+          wget -O $HOME/rpmbuild/SOURCES/{version}.tar.gz {url}/archive/{version}.tar.gz
           cp $WORKSPACE/{plugin}/specs/{plugin}/{plugin}.spec ~/rpmbuild/SPECS
           rpmbuild -bs $HOME/rpmbuild/SPECS/{plugin}.spec
           mock --rebuild --root=fedora-26-x86_64 --resultdir=$WORKSPACE '/var/lib/jenkins/rpmbuild/SRPMS/{plugin}-{version}-1.el7.centos.src.rpm'
@@ -21,15 +21,21 @@
           ls $WORKSPACE | grep '[^src].rpm' | xargs -I [] bash -c "sudo cp [] /var/www/html/repo.vimfactory.org/repos/26/x86_64/"
           sudo createrepo --update /var/www/html/repo.vimfactory.org/repos/26/x86_64/
 
+
 - project:
     name: vimfactory.org
     jobs:
       - 'fedora-{plugin}':
          plugin: vim-licenses
          url: https://github.com/antoyo/vim-licenses
-         version: 0.5
+         version: v0.5
 
       - 'fedora-{plugin}':
          plugin: vim-commentary
          url: https://github.com/tpope/vim-commentary
-         version: 1.3
+         version: v1.3
+
+      - 'fedora-{plugin}':
+         plugin: Gist.vim
+         url: https://github.com/mattn/gist-vim
+         version: 7.3
