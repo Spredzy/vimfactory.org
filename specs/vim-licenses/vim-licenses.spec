@@ -34,7 +34,7 @@ The HTML and CSS languages are also supported. It may work for other languages.
 
 %install
 mkdir -p %{buildroot}%{vimfiles_root}
-cp -ar {doc,plugin} %{buildroot}%{vimfiles_root}
+cp -ar {doc,plugin,licenses} %{buildroot}%{vimfiles_root}
 
 %post
 vim -c ":helptags %{vimfiles_root}/doc" -c ":q" &> /dev/null || :
@@ -48,5 +48,6 @@ vim -c ":helptags %{vimfiles_root}/doc" -c ":q" &> /dev/null || :
 %doc README.md
 %{vimfiles_root}/doc/*
 %{vimfiles_root}/plugin/*
+%{vimfiles_root}/licenses/*
 
 %changelog
