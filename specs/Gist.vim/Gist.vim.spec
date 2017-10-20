@@ -22,7 +22,7 @@ This is a vimscript for creating gists (http://gist.github.com).
 
 
 %prep
-%setup -q
+%setup -q -n gist-vim-%{version}
 
 
 %build
