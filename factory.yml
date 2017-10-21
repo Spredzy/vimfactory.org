@@ -39,3 +39,8 @@
          plugin: vim-gitgutter
          url: https://github.com/Spredzy/vim-gitgutter
          version: v1.0
+
+      - 'fedora-{plugin}':
+         plugin: vim-auto-pairs
+         url: https://github.com/jiangmiao/auto-pairs
+         version: v1.3.1
