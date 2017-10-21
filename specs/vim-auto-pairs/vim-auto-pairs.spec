@@ -30,7 +30,7 @@ Insert or delete brackets, parens, quotes in pair.
 
 %install
 mkdir -p %{buildroot}%{vimfiles_root}
-cp -ar {doc,plugin} %{buildroot}%{vimfiles_root}
+cp -ar {plugin} %{buildroot}%{vimfiles_root}
 
 %post
 vim -c ":helptags %{vimfiles_root}/doc" -c ":q" &> /dev/null || :
@@ -41,7 +41,6 @@ vim -c ":helptags %{vimfiles_root}/doc" -c ":q" &> /dev/null || :
 
 %files
 %doc README.md
-%{vimfiles_root}/doc/*
 %{vimfiles_root}/plugin/*
 
 %changelog
