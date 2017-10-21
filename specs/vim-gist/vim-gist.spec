@@ -14,6 +14,7 @@ BuildArch:      noarch
 
 
 Requires:       vim-common
+Requires:       vim-webadmin
 Requires(post): vim
 Requires(postun): vim
 
