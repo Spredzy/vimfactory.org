@@ -41,6 +41,11 @@
          version: v1.3.1
 
       - 'fedora-{plugin}':
+         plugin: vim-gist
+         url: https://github.com/mattn/gist-vim
+         version: 7.3
+
+      - 'fedora-{plugin}':
          plugin: vim-webapi
          url: https://github.com/mattn/webapi-vim
          version: 0.3
