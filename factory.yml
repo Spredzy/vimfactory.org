@@ -46,6 +46,6 @@
          version: v1.0
 
       - 'fedora-{plugin}':
-         plugin: vim-markdown-preview
-         url: https://github.com/Spredzy/vim-markdown-preview
+         plugin: vim-gv
+         url: https://github.com/Spredzy/gv.vim
          version: v1.0
