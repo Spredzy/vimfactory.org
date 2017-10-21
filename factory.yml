@@ -56,6 +56,11 @@
          version: 1.7.1
 
       - 'fedora-{plugin}':
+         plugin: vim-open-browser
+         url: https://github.com/tyru/open-browser.vim
+         version: v0.1.1
+
+      - 'fedora-{plugin}':
          plugin: vim-gitgutter
          url: https://github.com/Spredzy/vim-gitgutter
          version: v1.0
