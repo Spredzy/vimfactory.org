@@ -43,7 +43,7 @@ vim -c ":helptags %{vimfiles_root}/doc" -c ":q" &> /dev/null || :
 vim -c ":helptags %{vimfiles_root}/doc" -c ":q" &> /dev/null || :
 
 %files
-%license LICENSE
+%license LICENCE
 %doc README.mkd
 %{vimfiles_root}/doc/*
 %{vimfiles_root}/plugin/*
