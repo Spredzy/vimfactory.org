@@ -29,7 +29,7 @@ Open URI with your favorite browser from your most favorite editor
 
 %install
 mkdir -p %{buildroot}%{vimfiles_root}
-cp -ar {doc,autoload,lang,plugin} %{buildroot}%{vimfiles_root}
+cp -ar {doc,autoload,plugin} %{buildroot}%{vimfiles_root}
 
 %post
 vim -c ":helptags %{vimfiles_root}/doc" -c ":q" &> /dev/null || :
@@ -42,7 +42,6 @@ vim -c ":helptags %{vimfiles_root}/doc" -c ":q" &> /dev/null || :
 %doc README.md
 %{vimfiles_root}/doc/*
 %{vimfiles_root}/autoload/*
-%{vimfiles_root}/lang/*
 %{vimfiles_root}/plugin/*
 
 %changelog
