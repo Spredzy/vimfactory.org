@@ -1,7 +1,7 @@
 %global vimfiles_root %{_datadir}/vim/vimfiles
 
 Name:           vim-previm
-Version:        0.3
+Version:        1.7.1
 Release:        1%{?dist}
 Summary:        Vim plugin for preview
 Group:          Applications/Editors
