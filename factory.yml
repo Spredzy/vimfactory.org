@@ -51,6 +51,11 @@
          version: 0.3
 
       - 'fedora-{plugin}':
+         plugin: vim-previm
+         url: https://github.com/kannokanno/previm
+         version: 1.7.1
+
+      - 'fedora-{plugin}':
          plugin: vim-gitgutter
          url: https://github.com/Spredzy/vim-gitgutter
          version: v1.0
