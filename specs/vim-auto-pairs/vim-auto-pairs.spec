@@ -22,7 +22,7 @@ Insert or delete brackets, parens, quotes in pair.
 
 
 %prep
-%setup -q
+%setup -q -n auto-pairs-%{version}
 
 
 %build
