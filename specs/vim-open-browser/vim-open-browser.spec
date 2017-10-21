@@ -21,7 +21,7 @@ Requires(postun): vim
 Open URI with your favorite browser from your most favorite editor
 
 %prep
-%setup -q -n webapi-vim-%{version}
+%setup -q -n open-browser.vim-%{version}
 
 
 %build
