@@ -41,6 +41,11 @@
          version: v1.3.1
 
       - 'fedora-{plugin}':
+         plugin: vim-webapi
+         url: https://github.com/mattn/webapi-vim
+         version: 0.3
+
+      - 'fedora-{plugin}':
          plugin: vim-gitgutter
          url: https://github.com/Spredzy/vim-gitgutter
          version: v1.0
