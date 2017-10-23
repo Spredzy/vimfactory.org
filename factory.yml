@@ -17,18 +17,18 @@
           BASE_SRPM_FILE=$(basename $(rpmbuild -bs $HOME/rpmbuild/SPECS/{plugin}.spec | cut -d" " -f2) | sed 's/el7.centos/fc26/g')
           mock --rebuild --root=fedora-26-x86_64 --resultdir=$WORKSPACE $SRPM_FILE
           # Copy the files where they belong and refresh the repo with newer metadata
-          sudo mkdir -p '/var/www/html/repo.vimfactory.org/{plugin}/'
-          sudo cp $WORKSPACE/*.log $WORKSPACE/*.rpm '/var/www/html/repo.vimfactory.org/{plugin}/'
-          sudo cp $WORKSPACE/{plugin}/specs/{plugin}/{plugin}.spec '/var/www/html/repo.vimfactory.org/{plugin}/{plugin}.spec'
-          ls $WORKSPACE | grep '[^src].rpm' | xargs -I [] bash -c "sudo cp [] /var/www/html/repo.vimfactory.org/repos/26/noarch/"
-          sudo createrepo --update /var/www/html/repo.vimfactory.org/repos/26/noarch/
+          sudo mkdir -p '/var/www/html/repo.vimfactory.org/fedora/{plugin}/'
+          sudo cp $WORKSPACE/*.log $WORKSPACE/*.rpm '/var/www/html/repo.vimfactory.org/fedora/{plugin}/'
+          sudo cp $WORKSPACE/{plugin}/specs/{plugin}/{plugin}.spec '/var/www/html/repo.vimfactory.org/fedora/{plugin}/{plugin}.spec'
+          ls $WORKSPACE | grep '[^src].rpm' | xargs -I [] bash -c "sudo cp [] /var/www/html/repo.vimfactory.org/fedora/repos/26/noarch/"
+          sudo createrepo --update /var/www/html/repo.vimfactory.org/fedora/repos/26/noarch/
 
           echo "###########################################################"
           echo "# Ready to submit a new packages request"
           echo "#"
           echo "# URL to submit new request: https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&format=fedora-review"
-          echo "# URL to spec file: https://repo.vimfactory.org/fedora/{plugin}.spec"
-          echo "# URL to srpm: https://repo.vimfactory.org/fedora/$BASE_SRPM_FILE"
+          echo "# URL to spec file: https://repo.vimfactory.org/fedora/{plugin}/{plugin}.spec"
+          echo "# URL to srpm: https://repo.vimfactory.org/fedora/{plugin}/$BASE_SRPM_FILE"
           echo "#"
           echo "###########################################################"
 
