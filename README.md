@@ -26,12 +26,12 @@ yet another package.
 
 | Name | Summary | License | URL |
 |------|---------|---------|-----|
-| vim-licences | | | https://github.com/antoyo/vim-licenses |
-| vim-commentary | | | https://github.com/tpope/vim-commentary |
-| vim-auto-pairs | | | https://github.com/jiangmiao/auto-pairs |
-| vim-gist | | | https://github.com/mattn/gist-vim |
-| vim-webapi | | | https://github.com/mattn/webapi-vim |
-| vim-previm | | | https://github.com/kannokanno/previm |
-| vim-open-browser | | | https://github.com/tyru/open-browser.vim |
-| vim-gitgutter | | | https://github.com/Spredzy/vim-gitgutter |
-| iim-gv | | | https://github.com/Spredzy/gv.vim |
+| vim-licences | Vim Plugin that Provides Commands to Add Licenses at the Top of the Buffer | [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html) | https://github.com/antoyo/vim-licenses |
+| vim-commentary | commentary.vim: comment stuff out | [Vim](https://spdx.org/licenses/Vim.html) | https://github.com/tpope/vim-commentary |
+| vim-auto-pairs | Vim plugin, insert or delete brackets, parens, quotes in pair | [MIT](https://spdx.org/licenses/MIT.html) | https://github.com/jiangmiao/auto-pairs |
+| vim-gist | vimscript for gist  | [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html) | https://github.com/mattn/gist-vim |
+| vim-webapi | vim interface to Web API | TBD | https://github.com/mattn/webapi-vim |
+| vim-previm | Realtime preview by Vim. (Markdown, reStructuredText, textile) | [BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html) | https://github.com/kannokanno/previm |
+| vim-open-browser | Open URI with your favorite browser from your most favorite editor | TBD | https://github.com/tyru/open-browser.vim |
+| vim-gitgutter | A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks. | [MIT](https://spdx.org/licenses/MIT.html) | https://github.com/Spredzy/vim-gitgutter |
+| vim-gv | A git commit browser | TBD | https://github.com/Spredzy/gv.vim |
