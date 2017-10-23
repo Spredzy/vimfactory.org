@@ -14,6 +14,7 @@
           wget -O $HOME/rpmbuild/SOURCES/{version}.tar.gz {url}/archive/{version}.tar.gz
           cp $WORKSPACE/{plugin}/specs/{plugin}/{plugin}.spec ~/rpmbuild/SPECS
           SRPM_FILE=$(rpmbuild -bs $HOME/rpmbuild/SPECS/{plugin}.spec | cut -d" " -f2)
+          BASE_SRPM_FILE=$(basename $(rpmbuild -bs $HOME/rpmbuild/SPECS/{plugin}.spec | cut -d" " -f2))
           mock --rebuild --root=fedora-26-x86_64 --resultdir=$WORKSPACE $SRPM_FILE
           # Copy the files where they belong and refresh the repo with newer metadata
           sudo mkdir -p '/var/www/html/repo.vimfactory.org/{plugin}/'
@@ -21,6 +22,15 @@
           sudo cp $WORKSPACE/{plugin}/specs/{plugin}/{plugin}.spec '/var/www/html/repo.vimfactory.org/{plugin}/{plugin}.spec'
           ls $WORKSPACE | grep '[^src].rpm' | xargs -I [] bash -c "sudo cp [] /var/www/html/repo.vimfactory.org/repos/26/x86_64/"
           sudo createrepo --update /var/www/html/repo.vimfactory.org/repos/26/x86_64/
+
+          echo "###########################################################"
+          echo "# Ready to submit a new packages request"
+          echo "#"
+          echo "# URL to submit new request: https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&format=fedora-review"
+          echo "# URL to spec file: https://repo.vimfactory.org/fedora/{plugin}.spec"
+          echo "# URL to srpm: https://repo.vimfactory.org/fedora/$BASE_SRPM_FILE"
+          echo "#"
+          echo "###########################################################"
 
 - project:
     name: vimfactory.org
