@@ -21,6 +21,30 @@ By making Vim plugins an integral part of the system, it is easier to reach a br
 of people and for them it becomes less intimitading to give Vim a try. Plugins are simply
 yet another package.
 
+## Usage
+
+### Create new packages
+
+TODO
+
+### Install currently build packages while they get in the distro
+
+vimfactory.org creates a valid repo for each platform it maintains so community can
+use the Vim plugins via the package manager while the plugins make their way into
+the distribution itself.
+
+#### Fedora
+
+This is true for Fedora, CentOS and RHEL (and its other derivatives).
+Put the following content in `/etc/yum.repos.d/vimfactory.org.repo`
+
+```
+[vimfactory]
+name=vimfactory repo
+baseurl=http://repo.vimfactory.org/fedora/repos/26/noarch
+enabled=1
+gpgcheck=0
+```
 
 ## List of available packages
 
@@ -35,3 +59,4 @@ yet another package.
 | vim-open-browser | Open URI with your favorite browser from your most favorite editor | TBD | https://github.com/tyru/open-browser.vim |
 | vim-gitgutter | A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks. | [MIT](https://spdx.org/licenses/MIT.html) | https://github.com/Spredzy/vim-gitgutter |
 | vim-gv | A git commit browser | TBD | https://github.com/Spredzy/gv.vim |
+
