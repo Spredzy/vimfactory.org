@@ -29,7 +29,7 @@ In other words, this plugin allows you to lint while you type.
 
 
 %prep
-%setup -q
+%setup -q -n ale-%{version}
 
 
 %build
@@ -48,7 +48,6 @@ vim -c ":helptags %{vimfiles_root}/doc" -c ":q" &> /dev/null || :
 
 %files
 %license LICENSE
-%doc README.md
 %{vimfiles_root}/after/*
 %{vimfiles_root}/ale_linters/*
 %{vimfiles_root}/autoload/*
