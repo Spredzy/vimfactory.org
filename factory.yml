@@ -36,6 +36,11 @@
     name: vimfactory.org
     jobs:
       - 'fedora-{plugin}':
+         plugin: vim-ale
+         url: https://github.com/w0rp/ale
+         version: v1.6.0
+
+      - 'fedora-{plugin}':
          plugin: vim-licenses
          url: https://github.com/antoyo/vim-licenses
          version: v0.5
